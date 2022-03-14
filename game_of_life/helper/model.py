@@ -20,7 +20,7 @@ class GoLGrid(Model):
 
         for (contents, x, y) in self.grid.coord_iter():
             cell = Cell((x, y), self)
-            if self.random.random() < 0.1:
+            if self.random.random() < 0.8:
                 cell.state = cell.ALIVE
             self.grid.place_agent(cell, (x, y))
             self.schedule.add(cell)
